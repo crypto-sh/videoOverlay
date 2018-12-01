@@ -5,7 +5,7 @@ implement video overlay with exoPlayer in your application step by step
 
 Manifest
 
-```
+```xml
     //permission required
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -17,14 +17,13 @@ Manifest
 
 import exoPlayer latest version(2.9.2) in your dependencies gradle
 
-```
+```groovy
     implementation 'com.google.android.exoplayer:exoplayer:2.x.x'
-
 ```
 
 create new background service
 
-```
+```java
     public class VideoPlayerOverviewService extends Service implements View.OnTouchListener {
 
         float offsetX;
@@ -144,7 +143,7 @@ create new background service
 
 and finally add this line into your activity
 
-```
+```java
     public final static int REQUEST_CODE = 100;
 
     private void playOverlay(){
